@@ -8,16 +8,16 @@ import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./styles/global";
 import theme from "./styles/theme";
 import flattenMessages from "./helpers/flattenMessages";
-import locale from "./locale";
+import { ptBr } from "./locale";
 
 ReactDOM.render(
- <IntlProvider locale={"pt-BR"} messages={flattenMessages(locale["pt-BR"])}>
-  <Provider store={store}>
-   <ThemeProvider theme={theme}>
-    <GlobalStyles />
-    <Routes />
-   </ThemeProvider>
-  </Provider>
- </IntlProvider>,
- document.getElementById("root")
+  <IntlProvider locale={"pt-BR"} messages={flattenMessages(ptBr)}>
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        <Routes />
+      </ThemeProvider>
+    </Provider>
+  </IntlProvider>,
+  document.getElementById("root")
 );
