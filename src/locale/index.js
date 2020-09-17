@@ -1,11 +1,3 @@
-export default {
- "pt-BR": {
-  itensMenu: {},
-  labelsInputs: {
-   logIn: "E-mail",
-   password: "Senha",
-  },
-  buttons: {},
-  textPage: {},
- },
-};
+import * as ptBr from "./languages/pt-br.json";
+
+export { ptBr };

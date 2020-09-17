@@ -8,7 +8,6 @@ import PoppinsLightItalic from "../assets/fonts/Poppins-LightItalic.ttf";
 import PoppinsMedium from "../assets/fonts/Poppins-Medium.ttf";
 import PoppinsMediumItalic from "../assets/fonts/Poppins-MediumItalic.ttf";
 import PoppinsRegular from "../assets/fonts/Poppins-Regular.ttf";
-import BackgroundPage from "../assets/images/background.jpg";
 
 import { createGlobalStyle } from "styled-components";
 
@@ -85,11 +84,6 @@ export default createGlobalStyle`
     scroll-behavior: smooth;
   }
   body {
-    font-family: "PoppinsRegular", sans-serif;
-    background:#f2f2f2;
+    font-family: "PoppinsRegular", sans-serif; 
   }
-  h1,h2 {
-    font-family: "PoppinsBold", sans-serif;
-  }
-
 `;
