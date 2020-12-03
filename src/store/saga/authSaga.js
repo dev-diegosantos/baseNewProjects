@@ -1,14 +1,14 @@
-import { takeLatest, put } from "redux-saga/effects";
-import { Types } from "../ducks/auth";
-import { POST } from "utils/constants/verbs";
-import requestAPI from "helpers/requestHelpers";
-import { AUTH_USER } from "utils/constants/endpoints";
-import { history } from "utils/routers";
-import urls from "utils/constants/urls";
-import API from "utils/API";
+import { takeLatest, put } from 'redux-saga/effects';
+import { Types } from '../ducks/auth';
+import { POST } from 'static/verbs';
+import requestAPI from 'helpers/requestHelpers';
+import { AUTH_USER } from 'static/endpoints';
+import { history } from 'utils/routers';
+import urls from 'static/urls';
+import API from 'utils/API';
 
 function* requestAuth({ payload }) {
-  console.log("payload", payload);
+  console.log('payload', payload);
   try {
     const body = {
       email: payload.email,
@@ -22,8 +22,8 @@ function* requestAuth({ payload }) {
     Object.assign(API.defaults, {
       headers: { Authorization: `Bearer ${data.token}` },
     });
-    localStorage.setItem("token", data.token);
-    localStorage.setItem("id", data.id);
+    localStorage.setItem('token', data.token);
+    localStorage.setItem('id', data.id);
     history.push(`${urls.LINKS.APP}`);
   } catch (error) {
     console.log(error);
