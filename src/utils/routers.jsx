@@ -1,18 +1,18 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Route, Switch, Redirect } from "react-router";
-import { ConnectedRouter } from "connected-react-router";
-import { createBrowserHistory } from "history";
-import { isAuthenticated } from "./isAuthenticated";
-import Login from "../containers/Login";
-import urls from "./constants/urls";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Route, Switch, Redirect } from 'react-router';
+import { ConnectedRouter } from 'connected-react-router';
+import { createBrowserHistory } from 'history';
+import { isAuthenticated } from './isAuthenticated';
+import Login from 'pages/Login';
+import urls from 'static/urls';
 
 export const history = createBrowserHistory();
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
-    render={props =>
+    render={(props) =>
       isAuthenticated() ? (
         <Component {...props} />
       ) : (
@@ -34,11 +34,11 @@ const Routes = () => (
 );
 
 PrivateRoute.propTypes = {
-  component: PropTypes.func
+  component: PropTypes.func,
 };
 
 PrivateRoute.defaultProps = {
-  component: () => {}
+  component: () => {},
 };
 
 export default Routes;
