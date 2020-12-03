@@ -2,6 +2,7 @@
   "name": "react-based-architecture",
   "version": "2.0.0",
   "private": true,
+  "author": "Diego Santos <desenv.diegosantos@gmail.com>",
   "dependencies": {
     "@styled-system/css": "^5.1.5",
     "@testing-library/jest-dom": "^4.2.4",
@@ -61,14 +62,6 @@
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.10.0"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-push": "CI=true react-scripts test --passWithNoTests && npm run eslint",
-      "pre-commit": "npm run eslint:fix",
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
-    }
   },
   "lint-staged": {
     "src/**/*.{js,jsx}": [

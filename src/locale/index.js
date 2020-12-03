@@ -1,3 +1,3 @@
-import * as ptBr from "./languages/pt-br.json";
+import * as ptBr from './languages/pt-br.json';
 
 export { ptBr };
