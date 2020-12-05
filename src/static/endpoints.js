@@ -1,4 +1,4 @@
-const base = "https://esp-backend.ioasys.com.br";
+const base = "https://sua-api.com.br";
 
 const service = "api";
 const version = "v1";
